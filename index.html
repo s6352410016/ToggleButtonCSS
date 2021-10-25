@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d47cb01634.js" crossorigin="anonymous"></script>
+    <title>Toggle Button CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .bg{
+            width: 100px;
+            height: 50px;
+            border-radius: 30px;
+            background-color: #ededed;
+            cursor: pointer;
+        }
+        .active1{
+            background-color: rgb(18, 230, 71);
+        }
+        .button{
+            width: 40px;
+            height: 40px;
+            background-color: #d7d7d7;
+            border-radius: 50%;
+            position: relative;
+            top: 5px;
+            left: 5px;
+            transition: .2s;
+        }
+        .active2{
+            left: 55%;
+        }
+    </style>
+</head>
+<body>
+    <div class="arrow"><h1><i style="font-size: 3.5rem;" class="fas fa-arrow-down"></i></h1></div><br><br>
+    <div class="bg">
+        <div class="button"></div>
+    </div>
+    <script>
+        const bg = document.querySelector(".bg");
+        bg.onclick = () => {
+            bg.classList.toggle("active1");
+            document.querySelector(".button").classList.toggle("active2");
+        }
+    </script>
+</body>
+</html>
